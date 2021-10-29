@@ -1,23 +1,41 @@
+import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Micomponente from './components/Micomponente';
+
+
+
+
+
+function HolaMundo(nombre, edad){
+  let presentacion =  <div>
+        <h2>Hola soy {nombre}</h2>
+        <h3>Soy estudiante de React js Y tengo {edad} años</h3>
+      </div>
+
+  return presentacion;
+}   
 
 function App() {
+  let nombre="Gonzalo Salas";
+
+
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          hola bienvenido al curso de react de gonzalo salas WEB
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+          {HolaMundo(nombre,25)}
+
+        </header>
+
+        <section className="componentes">
+
+          <Micomponente/>
+
+        </section> 
     </div>
   );
 }
